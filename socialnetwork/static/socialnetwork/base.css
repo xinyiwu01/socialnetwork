@@ -1,0 +1,167 @@
+#id_site_name{
+    display: inline-block;
+    font-size: 3.2em;
+    color: black;
+}
+
+#id_header_div{
+    background-color: #6f94c6;
+    padding: 1px;
+    border: 1px;
+}
+
+a {
+    color: black;
+    font-size: 18.5px;
+}
+
+#id_page_name{
+    text-align: center;
+    font-size: 2em;
+}
+.links{
+    float:right;
+}
+
+
+.font1{
+    font-size: 18.5px;
+    font-style: oblique;
+}
+.font2{
+    font-size: 18.5px;
+}
+
+.font3{
+    font-size: 18.5px;
+    font-style: italic;
+}
+.content {
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 25px 50px;
+}
+.profile{
+    color: black;
+    font-size: 1em;
+    font-style: oblique;
+}
+.post{
+    border-style: dotted;
+    width: 50%;
+    margin-left: 30px;
+    padding: 15px 20px;
+}
+.comment{
+    border-style: dotted;
+    width: 40%;
+    margin-left: 80px;
+    padding: 15px 20px;
+}
+#id_user_picture{
+    width: 10vw;
+    height: 10vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px;
+}
+.picture_div{
+    width: 60vw;
+}
+.info{
+    width: 60vw;
+}
+#id_bio_input_text{
+    border-style: dotted;
+    width: 40vw;
+    padding: 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#id_choose_file{
+    padding: 10px 10px;
+    margin-left: 10vw;
+}
+#id_follower_list{
+    padding: 10px 10px;
+    margin-left: 10vw;
+}
+#id_user_bio{
+    width: 40vw;
+    padding: 10px 10px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: block;
+}
+#id_unfollow{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#id_username{
+    font-size: 18px;
+}
+#id_password{
+    font-size: 18px;
+}
+#id_confirm_password{
+    font-size: 18px;
+}
+#id_email{
+    font-size: 18px;
+
+}
+#id_first_name{
+    font-size: 18px;
+
+}
+#id_last_name{
+    font-size: 18px;
+
+}
+#id_login_button{
+    font-size: 18px;
+
+}
+#id_register_button{
+    font-size: 18px;
+
+}
+#id_post_button{
+    font-size: 18px;
+
+}
+#id_post_text_1{
+    font-size: 18px;
+
+}
+#id_post_date_time_1{
+    font-size: 18px;
+    font-style: italic;
+
+}
+#id_post_profile_1{
+    font-size: 18px;
+
+}
+
+#id_comment_text_1{
+    font-size: 18px;
+
+}
+#id_comment_date_time_1{
+    font-size: 18px;
+    font-style: italic;
+
+}
+#id_comment_profile_1{
+    font-size: 18px;
+
+}
+label{
+    font-size: 18px;
+
+}
+

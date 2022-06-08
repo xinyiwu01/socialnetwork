@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% load static %}
+            <link href="{% static 'socialnetwork/base.css' %}" rel="stylesheet" type="text/css">
+            <script src="{% static 'socialnetwork/socialnetwork.js' %}?v={% now 'U' %}" type="text/javascript"></script>
+            <title>{% block title %} socialnetwork {% endblock %}</title>
+    </head>
+
+    <body>
+        <div id="id_header_div">
+            <span id="id_site_name">Blog Master</span>
+            <span class="links">
+                {% block navigation %}
+                {% endblock %}
+            </span>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>

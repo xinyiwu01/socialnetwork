@@ -1,0 +1,66 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block navigation %}
+    <div>
+        <a href="{% url 'myprofile' %}" id="id_nav_profile">
+            {{ user.first_name }} {{ user.last_name }}
+        </a>
+    </div>
+    <div>
+        <span>
+            <a href="{% url 'global' %}" id="id_nav_global_stream">Global</a>
+        </span>
+        <span>
+            <a href="{% url 'follower' %}" id="id_nav_follower_stream">Follower</a>
+        </span>
+        <span>
+            <a href="{% url 'logout' %}" id="id_nav_logout">Logout</a>
+        </span>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+    <h2 id="id_page_name">Profile Page for {{ profile.user.first_name }} {{ profile.user.last_name }}</h2>
+    {% if not profile.picture %}
+        {% load static %}
+        <img src="{% static 'socialnetwork/default.jpg' %}" id="id_user_picture">
+    {% else %}
+        <img src="{% url 'photo' profile.user.id %}"  alt="default my picture" id="id_user_picture">
+    {% endif %}
+
+    <form action="{% url 'myprofile' %}" method="POST" enctype="multipart/form-data">
+        <table>
+            {{ form }}
+            {% comment %}<tr>
+                <td>
+                    <input type="text" id="id_bio_input_text">
+                </td>
+            </tr>
+            <tr>
+                <th>Profile Picture: </th>
+                <td><button id="id_profile_picture" type="submit">Choose File</button></td>
+                <td>No File Chosen</td>
+            </tr>
+            <tr>
+                <td><button id="id_update_profile_button" type="submit">Submit</button></td>
+            </tr>{% endcomment %}
+        </table>
+        <button id="id_update_profile_button" type="submit">Submit</button>
+        {% csrf_token %}
+    </form>
+
+    <div>
+        You are following:
+        <ul>
+            {% for u in profile.following.all %}
+                <li>
+                    <a href="{% url 'other' u.id %}"
+                       id="id_profile_link_{{ u.username }}">
+                        {{ u.first_name }} {{ u.last_name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

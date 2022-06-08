@@ -1,0 +1,27 @@
+{% extends "socialnetwork/base.html" %}
+
+{% block navigation %}
+    <span>
+        <a href="{% url 'login' %}" id="id_login_link">Login</a>
+    </span>
+{% endblock %}
+
+{% block content %}
+    <div id="id_page_name">Register</div>
+    <div class="content">
+    <form method="post" action="{% url 'register' %}">
+        <table>
+            {{ form }}
+        </table>
+        {% csrf_token %}
+        <button type="submit" id="id_register_button">Submit</button>
+    </form>
+    </div>
+
+    {% for error in form.non_field_errors %}
+        <p class="error">
+            {{ error }}
+        </p>
+    {% endfor %}
+
+{% endblock %}
